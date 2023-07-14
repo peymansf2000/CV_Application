@@ -1,4 +1,4 @@
-# flutter_application_2
+# CV_Application
 
 A new Flutter project.
 
