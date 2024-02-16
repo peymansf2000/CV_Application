@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color surfaceColor = Color(0x0dffffff);
+    Color surfaceColor = const Color(0x0dffffff);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Padding(
             padding: const EdgeInsets.all(32),
@@ -111,11 +111,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         'Peyman Salehifard',
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 2,
                       ),
-                      Text('Programmer'),
-                      SizedBox(
+                      const Text('Programmer'),
+                      const SizedBox(
                         height: 8,
                       ),
                       Row(
@@ -139,21 +139,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   CupertinoIcons.heart,
                   color: Theme.of(context).primaryColor,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 )
               ],
             ),
           ),
           Padding(
-              padding: EdgeInsets.fromLTRB(32, 0, 32, 16),
+              padding: const EdgeInsets.fromLTRB(32, 0, 32, 16),
               child: Text(
                 "Enthusiastic young computer geek seeking an apprenticeship as a Fachinformatiker to enhance skills and knowledge. Eager to gain practical experience in programming, systems analysis, and database management. Committed to team success and continuous self-improvement in the IT industry.",
                 style: Theme.of(context).textTheme.bodyMedium,
               )),
-          Divider(),
+          const Divider(),
           Padding(
-            padding: EdgeInsets.fromLTRB(32, 12, 32, 0),
+            padding: const EdgeInsets.fromLTRB(32, 12, 32, 0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -164,10 +164,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       .bodyMedium!
                       .copyWith(fontWeight: FontWeight.w900),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 2,
                 ),
-                Icon(
+                const Icon(
                   CupertinoIcons.chevron_down,
                   size: 12,
                 )
@@ -223,8 +223,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-          SizedBox(height: 16),
-          Divider(),
+          const SizedBox(height: 16),
+          const Divider(),
           Padding(
             padding: const EdgeInsets.fromLTRB(32, 12, 8, 12),
             child: Text('Personal information',
@@ -237,26 +237,26 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.fromLTRB(32, 0, 32, 12),
             child: Column(
               children: [
-                TextField(
+                const TextField(
                   decoration: InputDecoration(
                       labelText: 'E-Mail', prefixIcon: Icon(CupertinoIcons.at)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
-                TextField(
+                const TextField(
                   decoration: InputDecoration(
                       labelText: 'Password',
                       prefixIcon: Icon(CupertinoIcons.lock)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 SizedBox(
                     height: 50,
                     width: double.infinity,
-                    child:
-                        ElevatedButton(onPressed: () {}, child: Text('Save')))
+                    child: ElevatedButton(
+                        onPressed: () {}, child: const Text('Save')))
               ],
             ),
           ),
@@ -313,7 +313,7 @@ class Skill extends StatelessWidget {
               height: 45,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Text(title)
